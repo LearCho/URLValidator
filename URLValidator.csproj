@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup Label="URLModel">
+    <None Include="URLModel.consumption.cs">
+      <DependentUpon>URLModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="URLModel.training.cs">
+      <DependentUpon>URLModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="URLModel.zip">
+      <DependentUpon>URLModel.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
